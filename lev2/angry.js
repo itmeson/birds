@@ -25,6 +25,8 @@ var egg1Image = document.getElementById("egg1");
 var egg2Image = document.getElementById("egg2");
 var bacon1Image = document.getElementById("bacon1");
 var bacon2Image = document.getElementById("bacon2");
+speedShot = 15;  // default value for global variable for speed of bird.  Is reset by keydown event.
+
 
 window.onload = function(){
 
@@ -87,11 +89,18 @@ window.onload = function(){
 			x:500,
 			y:300,
 			vel:{
-				x:Math.cos(angle)*15,
-				y:-Math.sin(angle)*15
+				x:Math.cos(angle)*speedShot,
+				y:-Math.sin(angle)*speedShot
 			},
 			angle:angle
 		};
+	}
+
+
+	window.onkeydown = function(s){
+	if (s.keyCode >= 48 && s.keyCode <=58)  speedShot = (2*(s.keyCode - 48));
+	console.log(speedShot);
+
 	}
 
 	window.onclick = function(e){
@@ -107,7 +116,7 @@ window.onload = function(){
 
 		var bird = newBird(angle);
 		birds.push(bird);
-		plotBird(bird);
+		plotBird(bird);   //uncomment to add graph points after each shot
 	}
 
 	var graphBirds = [];

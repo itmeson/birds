@@ -1,9 +1,33 @@
 Angry Physics
 ===
 
-**[ONLINE DEMO](http://ncase.me/birds)**
 
-A proof-of-concept for my theory on Explorable Explanations.
+A proof-of-concept of an Explorable Explanation, derived from and extending Nicky Case's [original](https://github.com/ncase/birds).
+
+This version is aimed at playing with the tensions between playing, winning, and understanding (and fun, efficiency, and insight) while learning something about projectile motion, the usefulness of multiple representations, and the importance of data.
+
+Level 1:  The player has two variables at their control (the angle and the speed of the bird), but no feedback other than seeing the flight of the bird and where it hits, and whether or not the pig is hit.
+
+Level 2: The player has the same two variables at their control, but this time a graph of Distance vs. Angle is produced, with all points the same color.  If the player switches shot velocity frequently there is little clue as to what points corresponded to which conditions, though the player will perhaps see the envelope of the sine curve.
+
+Level 3: The player is restricted to a single angle but can manipulate the shot velocity.
+
+Level 4: Different shot velocities are colored differently on the graph, so the player can see a family of sine curves with different amplitudes
+
+Level 5 and beyond (maybe): ?? Why is it a sine curve?  Why are there two solutions?  What happens if gravity is different?  What happens if you fire from a cliff? How can you predict without having to produce all the data first?  Visual "derivation" of the equations of motion.
+
+TODO:
+ - Move current level 3 to 4.
+ - Write lev3 to have restricted shot angle
+ - Play with equation, motion correspondence. Possible use of desmos embded?
+ - Find better colors, graph markers for lev 2 and 4.
+ - Write lesson/teacher guide, instructions for player
+ - 
+ 
+
+Case's notes:  
+-------------
+
 
 Interactivity can be used to let the user explore a system,
 and apply a scientific learning method towards it.
